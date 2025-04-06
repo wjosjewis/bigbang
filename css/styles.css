@@ -1,0 +1,226 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg,#1b1642,#1b1642);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Сайдбар */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+    transition: 0.3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #444;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #666;
+}
+
+/* Кнопка скрытия сайдбара */
+.toggle-sidebar {
+    position: fixed;
+    left: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.collapsed .sidebar {
+    left: -250px;
+}
+
+.collapsed .content {
+    margin-left: 50px;
+}
+
+.collapsed .toggle-sidebar {
+    left: 10px;
+}
+
+/* Основной контент */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 300px; /* Сдвигаем текст правее от меню */
+    transition: margin-left 0.3s;
+}
+
+/* Увеличиваем расстояние между строками в параграфах */
+.content p {
+    line-height: 1.8; /* Делаем текст более читаемым */
+}
+
+/* Увеличиваем расстояние между заголовками и текстом */
+.content h1, 
+.content h2, 
+.content h3 {
+    margin-bottom: 20px; /* Отступ вниз */
+    margin-top: 40px; /* Отступ вверх, чтобы заголовки не прилипали к предыдущему контенту */
+}
+ul {
+    background: white; /* Белый фон */
+    padding: 15px; /* Отступы внутри прямоугольника */
+   
+    display: inline-block; /* Чтобы фон был только под списком */
+}
+
+ul li {
+    list-style: none; /* Убираем маркеры */
+}
+
+ul li a {
+    color: black; /* Чёрный текст */
+   
+    font-weight: bold; /* Делаем текст жирным */
+    display: block; /* Чтобы ссылки были на всю ширину */
+    padding: 5px 0; /* Добавляем немного пространства между строками */
+}
+h1.main-title {
+    font-size: 60px; /* Очень большой размер */
+    font-weight: bold;
+    text-transform: uppercase; /* Все буквы заглавные */
+    text-align: center;
+    margin-top: 20px;
+}
+.welcome-text {
+    font-size: 24px; /* Чуть больше стандартного размера */
+    text-align: center; /* Выравнивание по центру */
+    margin-top: 10px;
+    font-weight: bold;
+}
+h1.sci-facts {
+    text-align: center;
+    font-size: 40px; /* Чуть больше */
+}
+h1.facts {
+    text-align: center;
+    font-size: 40px; /* Чуть больше */
+}
+.equation {
+    background: white;
+    padding: 15px;
+    display: inline-block;
+    font-size: 1.5em; /* Увеличение размера шрифта */
+    color: black; /* Цвет текста */
+    border: 2px solid black; /* Чёрная рамка */
+}
+
+#test .quiz-container {
+    background-color: white;
+    color: black; /* Черный текст */
+    padding: 50px;
+    border-radius: 12px;
+    width: 90%; /* Увеличил ширину контейнера */
+    max-width: 1000px; /* Увеличил максимальную ширину */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+#test .quiz-container h2 {
+    text-align: center;
+    color: black; /* Черный текст для заголовка */
+    margin-bottom: 40px;
+    font-size: 30px; /* Увеличил размер шрифта заголовка */
+}
+
+.quiz-question {
+    margin-bottom: 30px; /* Увеличил отступы между вопросами */
+}
+
+.quiz-question p {
+    font-weight: bold;
+    color: black; /* Черный текст для вопросов */
+    font-size: 18px; /* Увеличил размер шрифта вопросов */
+}
+
+.quiz-container label {
+    color: black; /* Черный текст для вариантов */
+    font-size: 16px; /* Увеличил размер шрифта вариантов */
+}
+
+.quiz-container button {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 18px; /* Увеличил размер шрифта на кнопке */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.quiz-container button:hover {
+    background-color: #444;
+}
+
+#quiz-result {
+    margin-top: 40px;
+    font-weight: bold;
+    color: black; /* Черный текст для результата */
+    font-size: 18px; /* Увеличил размер шрифта для результата */
+}
+.quiz-container {
+    background-color: white; /* Белый прямоугольник */
+    color: black; /* Черный текст */
+    padding: 40px; /* Отступы внутри */
+    border-radius: 3px; /* Скругление углов */
+    width: 80%; /* Ширина блока */
+    max-width: 900px; /* Максимальная ширина */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Тень для блока */
+    margin: 0 auto; /* Центрирование блока */
+    height: 700px; /* Высота блока */
+    overflow-y: auto; /* Вертикальная прокрутка внутри блока */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    position: relative;
+}
