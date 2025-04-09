@@ -224,3 +224,94 @@ h1.facts {
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
     position: relative;
 }
+.highlight-box {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  margin: 30px 0;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: left;
+}
+.welcome-text {
+  font-size: 2.05em;  /* было, например, 2em — стало чуть больше */
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.image-stack-container {
+  position: absolute;
+  top: 550px;       /* отступ сверху */
+  right: 100px;     /* или left: 100px; если тебе надо слева */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.4s ease, right 0.4s ease; /* ⬅️ Плавность */
+}
+.image-stack-container img {
+  width: 300px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+#images-bang {
+  top: 1470px;
+  right: 100px;
+}
+
+#images-particles {
+  top: 2400px;
+  right: 100px;
+}
+
+#images-stars {
+  top: 3500px;
+  right: 100px;
+}
+
+#images-cmb {
+  top: 4550px;
+  right: 100px;
+}
+.menu-collapsed .image-stack-container {
+  right: 250px; /* сместим левее */
+  transform: scale(1.3); /* увеличим немного */
+}
+body.menu-collapsed #images-bang {
+  right: 250px;
+  transform: scale(1.3);
+}
+
+body.menu-collapsed #images-particles {
+  right: 250px;
+  transform: scale(1.3);
+}
+
+body.menu-collapsed #images-stars {
+  right: 250px;
+  transform: scale(1.3);
+}
+
+body.menu-collapsed #images-cmb {
+  right: 250px;
+  transform: scale(1.3);
+}
+/* Стиль для блоков с фактами о Большом Взрыве */
+.big-bang-fact p {
+    font-size: 1.2em; /* Увеличиваем шрифт */
+    line-height: 1.6; /* Увеличиваем межстрочный интервал для лучшей читабельности */
+    background-color: gray; /* Белый фон для текста */
+   font-weight: bold;
+
+    padding: 15px; /* Добавляем отступы внутри контейнера */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для эффекта подъема */
+    margin-bottom: 20px; /* Расстояние между контейнерами */
+}
+
+.big-bang-fact h3 {
+    font-size: 1.5em; /* Увеличиваем размер заголовков */
+    margin-top: 0; /* Убираем отступ сверху */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+}
